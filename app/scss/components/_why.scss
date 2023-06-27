@@ -1,0 +1,45 @@
+.why {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    position: relative;
+    border: 1px solid $c-white;
+    max-width: 513px;
+    width: 100%;
+  }
+
+  &__img-box {
+    position: absolute;
+    left: -46px;
+    top: -36px;
+  }
+
+  &__info {
+    max-width: 617px;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 40px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    margin-bottom: 72px;
+
+    p {
+      max-width: 583px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

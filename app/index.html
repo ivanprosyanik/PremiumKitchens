@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -10,17 +10,243 @@
 <body>
   <div class="wrapper">
 
-      <header class="header">
+
+<header class="header">
   <div class="container">
-    
+    <nav class="header__nav">
+      <a class="logo logo-link" href="#">
+        <img src="images/icons/logo.svg" alt="Logotype">
+      </a>
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link" href="#">Главная</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Кухни</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Процесс проектирования</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Галерея</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
-    
-      <main class="main">
-        <div class="container"></div>
-      </main>
-    
-  <script src="../js/libs.min.js"></script>
+
+<main class="main">
+  <section class="hero section-offset">
+  <div class="container">
+    <h1 class="hero__title">
+      делаем
+      <span>
+        <a class="hero__title-link icon icon--arrow-right" href="#"></a>
+        кухни
+      </span>
+      на заказ
+    </h1>
+    <ul class="hero__list">
+      <li class="hero__item">
+        Роскошный дизайн
+      </li>
+      <li class="hero__item">
+        Исключительное качество
+      </li>
+      <li class="hero__item">
+        Непревзайденная ценность
+      </li>
+    </ul>
+    <a class="hero__link link link--border" href="#">
+      начни кухню своей мечты
+      <span class="icon icon--angle-arrow"></span>
+    </a>
+  </div>
+</section>
+  <section class="about section-offset">
+  <div class="container">
+    <h2 class="title about__title">
+      Кухни
+    </h2>
+    <div class="about__wrapper">
+      <div class="about__img-box">
+        <picture>
+          <source srcset="images/dist/about-img-1.avif" type="image/avif">
+          <source srcset="images/dist/about-img-1.webp" type="image/webp">
+          <img src="images/dist/about-img-1.jpg" alt="">
+        </picture>
+      </div>
+      <div class="about__img-box">
+        <picture>
+          <source srcset="images/dist/about-img-2.avif" type="image/avif">
+          <source srcset="images/dist/about-img-2.webp" type="image/webp">
+          <img src="images/dist/about-img-2.jpg" alt="">
+        </picture>
+      </div>
+      <div class="about__cta-box">
+        <p class="about__text">
+          Мы предлагаем кухни самого высокого качества по самым низким ценам, орентируясь на ваш вкус.
+        </p>
+        <a class="about__link link link--stroke" href="#">смотреть еще</a>
+      </div>
+    </div>
+  </div>
+  <div class="about-info">
+    <div class="container">
+      <div class="about-info__wrapper">
+        <p class="about-info__text">
+          Уже более 10 лет <span>premium <br> kitchens</span> пользуется в Литве авторитетом в области создания
+          изысканных кухонь премиум - класса на заказ.
+        </p>
+        <ul class="about-info__list">
+          <li class="about-info__item">
+            <span class="about-info__item-number">10+</span>
+            <div class="about-info__item-text">
+              Многолетний опыт работы
+            </div>
+          </li>
+          <li class="about-info__item">
+            <span class="about-info__item-number">5000+</span>
+            <div class="about-info__item-text">
+              Реализованные проекты
+            </div>
+          </li>
+          <li class="about-info__item">
+            <span class="about-info__item-number">35+</span>
+            <div class="about-info__item-text">
+              Полученные награды
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="why section-offset">
+  <div class="container">
+    <div class="why__wrapper">
+      <div class="why__img">
+        <div class="why__img-box">
+          <picture>
+            <source srcset="images/dist/why-img.avif" type="image/avif">
+            <source srcset="images/dist/why-img.webp" type="image/webp">
+            <img src="images/dist/why-img.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="why__info">
+        <h2 class="title why__title">
+          Почему <span>premium kitchens?</span>
+        </h2>
+        <div class="why__text">
+          <p>
+            Наша компания благодаря страсти к мастерству
+            и вниманию к деталям превращает помещения в кулинаррные произвидения искусства. Наша приверженность качеству
+            непоколебимо, использование лучших материалов для производства кухонь, выдерживающих испытание временем.
+          </p>
+          <p>
+            Сочетая роскошь, функциональность и доступность, мы воплощаем мечты в жизнь, превосходя ожидания с каждым
+            проектом. <br>
+            Ощутите воплощение элегантности и индивидуального дизайна с нашей исключительной командой мастеров.
+          </p>
+        </div>
+        <a class="why__link link link--stroke" href="#">подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="materials section-offset">
+  <div class="container">
+    <div class="materials__top">
+      <h2 class="title">
+        Материалы
+      </h2>
+      <div class="materials__text">
+        <p>
+          Широкий выбор материалов: выберите из широкого ассортимента высококачественных материалов, включая изысканные
+          породы
+          дерева, гладкую современную отделку, прочные столешницы и первоклассную бытовую технику. Наш выбор
+          гарантирует, что ваша
+          кухня будет не
+          только красивой, но и долговечной.
+        </p>
+      </div>
+    </div>
+    <ul class="materials__list">
+      <li class="materials__item">
+        <a class="materials__link" href="#">
+          <article class="materials__card card">
+            <div class="card__head">
+              <picture>
+                <source srcset="images/dist/materials-1.avif" type="image/avif">
+                <source srcset="images/dist/materials-1.webp" type="image/webp">
+                <img src="images/dist/materials-1.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card__bottom">
+              <a class="card__link icon icon--arrow-right-long" href="#">Экзотическая древесина</a>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li class="materials__item">
+        <a class="materials__link" href="#">
+          <article class="materials__card card">
+            <div class="card__head">
+              <picture>
+                <source srcset="images/dist/materials-2.avif" type="image/avif">
+                <source srcset="images/dist/materials-2.webp" type="image/webp">
+                <img src="images/dist/materials-2.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card__bottom">
+              <a class="card__link icon icon--arrow-right-long" href="#">Натуральный камень</a>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li class="materials__item">
+        <a class="materials__link" href="#">
+          <article class="materials__card card">
+            <div class="card__head">
+              <picture>
+                <source srcset="images/dist/materials-3.avif" type="image/avif">
+                <source srcset="images/dist/materials-3.webp" type="image/webp">
+                <img src="images/dist/materials-3.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card__bottom">
+              <a class="card__link icon icon--arrow-right-long" href="#">Инженерный кварц</a>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li class="materials__item">
+        <a class="materials__link" href="#">
+          <article class="materials__card card">
+            <div class="card__head">
+              <picture>
+                <source srcset="images/dist/materials-4.avif" type="image/avif">
+                <source srcset="images/dist/materials-4.webp" type="image/webp">
+                <img src="images/dist/materials-4.jpg" alt="">
+              </picture>
+            </div>
+            <div class="card__bottom">
+              <a class="card__link icon icon--arrow-right-long" href="#">Стекло</a>
+            </div>
+          </article>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+</main>
+
+<script src="../js/libs.min.js"></script>
 <script src="../js/main.js"></script>
 </div>
 
