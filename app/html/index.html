@@ -1,10 +1,14 @@
-  @include('global/_head.html', {
-    pageName: 'Home'
-  })
-      @include('global/_header.html')
-    
-      <main class="main">
-        <div class="container"></div>
-      </main>
-    
-  @include('global/_footer.html')
+@include('global/_head.html', {
+pageName: 'Home'
+})
+
+@include('global/_header.html')
+
+<main class="main">
+  @include('parts/_hero.html')
+  @include('parts/_about.html')
+  @include('parts/_why.html')
+  @include('parts/_materials.html')
+</main>
+
+@include('global/_footer.html')

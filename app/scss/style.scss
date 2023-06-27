@@ -1,8 +1,12 @@
 @import 'global/reset';
 @import 'global/fonts';
 @import 'global/vars';
-@import 'global/global';
+@import 'global/settings';
 @import 'global/mixins';
 
 
-// @import 'components/header'
+@import 'components/header';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/why';
+@import 'components/materials';

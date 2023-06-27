@@ -27,24 +27,24 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({ outputStyle: 'compressed' }))
-  .pipe(concat('style.min.css'))
-  .pipe(
-    autoprefixer({
-      overrideBrowserslist: ['last 10 versions'],
-      grid: true
-    })
-  )
-  .pipe(dest('app/css'))
+    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('style.min.css'))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ['last 10 versions'],
+        grid: true
+      })
+    )
+    .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
 
 function scripts() {
   return src(['app/js/main.js'])
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js'))
+    .pipe(browserSync.stream())
 }
 
 function libsJS() {
@@ -98,15 +98,17 @@ function libsCSS() {
 function images() {
   return src(['app/images/src/*.*', '!app/images/src/*.svg'])
     .pipe(newer('app/images/dist'))
-    .pipe(avif({quality: 50}))
-    
+    .pipe(avif({ quality: 50 }))
+
     .pipe(src('app/images/src/*.*'))
     .pipe(newer('app/images/dist'))
     .pipe(webp())
 
     .pipe(src('app/images/src/*.*'))
     .pipe(newer('app/images/dist'))
-    .pipe(imagemin())
+    .pipe(imagemin([
+      imagemin.mozjpeg({ quality: 75, progressive: true })
+    ]))
 
     .pipe(dest('app/images/dist'))
 }

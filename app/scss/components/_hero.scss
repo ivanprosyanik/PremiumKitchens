@@ -1,0 +1,92 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 185px;
+  min-height: 100vh;
+  background-image: url(../images/dist/hero-img.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 80px;
+    display: inline-block;
+    max-width: 573px;
+    text-transform: uppercase;
+    margin-bottom: 81px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      padding-left: 56px;
+    }
+  }
+
+  &__title-link {
+    width: 138px;
+    height: 58px;
+    background-color: #a78B6e;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      min-width: 100px;
+      height: 28px;
+    }
+  }
+
+  &__list {
+    max-width: 339px;
+    padding: 35px 24px;
+    background-color: rgba(#000, .3);
+    backdrop-filter: blur(10px);
+    border-left: 2px solid $c-white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__item {
+    &::before {
+      content: '-';
+      padding-left: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    max-width: 455px;
+
+    span {
+      width: 62px;
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $c-white;
+
+      &::before {
+        min-width: 80px;
+        min-height: 70px;
+        background-color: #000;
+      }
+    }
+
+    &::before {
+      order: 2;
+    }
+  }
+}
