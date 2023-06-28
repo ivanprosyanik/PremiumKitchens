@@ -34,24 +34,44 @@ body {
   margin-bottom: 120px;
 }
 
+.section--dark {
+  background-color: $c-shaftF;
+}
+
 .title {
   font-weight: 500;
   font-size: 70px;
 }
 
 .link {
+  &__text {
+    display: block;
+    transition: transform .3s ease-in-out;
+  }
+
   &--border {
     padding: 32px 68px;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(12.5px);
     text-transform: uppercase;
     border-left: 2px solid $c-white;
+
+    &:hover {
+      .link__text {
+        transform: scale(1.05);
+      }
+    }
   }
 
   &--stroke {
     text-transform: uppercase;
     border: 1px solid $c-white;
     padding: 25px 107px;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -88,6 +108,18 @@ body {
   &--angle-arrow {
     &::before {
       mask-image: url(../images/sprite.svg#angle-arrow);
+    }
+  }
+
+  &--whatsapp {
+    &::before {
+      mask-image: url(../images/sprite.svg#whatsapp);
+    }
+  }
+
+  &--facebook {
+    &::before {
+      mask-image: url(../images/sprite.svg#facebook);
     }
   }
 }

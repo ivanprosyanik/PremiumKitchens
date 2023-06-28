@@ -1,0 +1,66 @@
+.consult {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    font-size: 40px;
+    max-width: 598px;
+  }
+
+  &__form {
+    padding: 100px 71px 76px;
+    border: 1px solid $c-white;
+    max-width: 574px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__form-data {
+    margin-bottom: 90px;
+  }
+
+  &__field {
+    background-color: transparent;
+    border: 0;
+    outline: 1px solid transparent;
+    padding: 30px;
+    border-bottom: 1px solid $c-white;
+    text-align: center;
+    width: 100%;
+    transition: outline-color .3s ease-in-out;
+
+    &:focus {
+      outline-color: $c-white;
+    }
+  }
+
+  &__label {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__btn {
+    @extend .hero__link;
+    padding: 26px 23px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__notice {
+    font-weight: 300;
+    font-size: 10px;
+    max-width: 337px;
+  }
+}
