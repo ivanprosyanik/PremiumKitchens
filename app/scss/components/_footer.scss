@@ -7,7 +7,7 @@
   }
 
   .logo {
-    margin-bottom: 90px;
+    margin-bottom: 100px;
   }
 
   &__list {
@@ -33,7 +33,7 @@
 
     span {
       display: block;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 
@@ -49,8 +49,8 @@
 
   &__social-link {
     &::before {
-      min-width: 43px;
-      min-height: 43px;
+      min-width: 75px;
+      min-height: 75px;
     }
   }
 }

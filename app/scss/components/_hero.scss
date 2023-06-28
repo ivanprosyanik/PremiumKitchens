@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 200px;
+  padding-top: 255px;
   padding-bottom: 185px;
   min-height: 100vh;
   background-image: url(../images/dist/hero-img.jpg);
@@ -49,9 +49,9 @@
     backdrop-filter: blur(10px);
     border-left: 2px solid $c-white;
     position: absolute;
-    right: 0;
+    right: 17px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-63%);
   }
 
   &__item {
@@ -67,7 +67,7 @@
 
   &__link {
     display: block;
-    max-width: 455px;
+    max-width: 495px;
 
     .icon {
       width: 62px;
