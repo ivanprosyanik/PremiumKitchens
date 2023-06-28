@@ -40,7 +40,10 @@ function styles() {
 }
 
 function scripts() {
-  return src(['app/js/main.js'])
+  return src([
+    'app/js/main.js',
+    'app/js/libs.min.js',
+  ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
@@ -152,7 +155,8 @@ function build() {
       'app/css/style.min.css',
       'app/js/main.min.js',
       // 'app/images/**/*.*'
-      'app/images/dist/*.*'
+      'app/images/dist/*.*',
+      'app/images/sprite.svg'
     ],
     { base: 'app' })
     .pipe(dest('dist'));
