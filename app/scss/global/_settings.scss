@@ -86,7 +86,7 @@ body {
     min-width: 24px;
     height: 24px;
     background-color: $c-white;
-    mask-image: url(../images/sprite.svg#arrow-left);
+    mask-image: url(images/sprite.svg#arrow-left);
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
@@ -95,31 +95,31 @@ body {
 
   &--arrow-right {
     &::before {
-      mask-image: url(../images/sprite.svg#arrow-right);
+      mask-image: url(images/sprite.svg#arrow-right);
     }
   }
 
   &--arrow-right-long {
     &::before {
-      mask-image: url(../images/sprite.svg#arrow-right-long);
+      mask-image: url(images/sprite.svg#arrow-right-long);
     }
   }
 
   &--angle-arrow {
     &::before {
-      mask-image: url(../images/sprite.svg#angle-arrow);
+      mask-image: url(images/sprite.svg#angle-arrow);
     }
   }
 
   &--whatsapp {
     &::before {
-      mask-image: url(../images/sprite.svg#whatsapp);
+      mask-image: url(images/sprite.svg#whatsapp);
     }
   }
 
   &--facebook {
     &::before {
-      mask-image: url(../images/sprite.svg#facebook);
+      mask-image: url(images/sprite.svg#facebook);
     }
   }
 }
