@@ -56,7 +56,7 @@ function libsJS() {
     // './node_modules/lightgallery/plugins/pager/lg-pager.min.js',
     // './node_modules/starry-rating/dist/starry.min.js',
     // './node_modules/nouislider/dist/nouislider.min.js',
-    // './node_modules/swiper/swiper-bundle.min.js'
+    './node_modules/swiper/swiper-bundle.min.js'
 
   ])
     .pipe(concat('libs.min.js'))
@@ -72,7 +72,7 @@ function libsCSS() {
     // './node_modules/lightgallery/css/lg-pager.css',
     // './node_modules/starry-rating/dist/starry.css',
     // './node_modules/nouislider/dist/nouislider.css',
-    // './node_modules/swiper/swiper-bundle.css'
+    './node_modules/swiper/swiper-bundle.css'
   ])
     .pipe(concat('libs.min.css'))
     .pipe(cleanCSS())

@@ -69,7 +69,7 @@
     display: block;
     max-width: 455px;
 
-    span {
+    .icon {
       width: 62px;
       display: flex;
       position: absolute;
@@ -79,8 +79,8 @@
       background-color: $c-white;
 
       &::before {
-        min-width: 80px;
-        min-height: 70px;
+        min-width: 40px;
+        min-height: 40px;
         background-color: #000;
       }
     }

@@ -1,4 +1,6 @@
 .materials {
+  padding: 77px 0 100px;
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -19,12 +21,21 @@
   &__item {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    max-width: 270px;
     height: 364px;
+    transition: transform .3s ease-in-out;
 
     &:not(:last-child) {
       margin-right: 40px;
     }
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
+
+
 
   &__card {
     display: flex;
@@ -36,6 +47,15 @@
 
 .card {
   height: 100%;
+
+  &__head {
+    max-width: 270px;
+    min-height: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &__bottom {
     display: flex;
     flex-direction: column;

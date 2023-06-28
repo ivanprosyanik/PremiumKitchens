@@ -1,0 +1,56 @@
+.footer {
+  padding: 100px 0 120px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo {
+    margin-bottom: 90px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__address {
+    max-width: 254px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto;
+  }
+
+  &__info {
+    margin-left: auto;
+
+    span {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-link {
+    &::before {
+      min-width: 43px;
+      min-height: 43px;
+    }
+  }
+}
