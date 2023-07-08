@@ -4,10 +4,30 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include r($tablet-2) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($phone) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__links {
+    @include r($tablet-2) {
+      margin-bottom: 40px;
+    }
+
+    @include r($phone) {
+      margin-bottom: 0;
+    }
   }
 
   .logo {
-    margin-bottom: 100px;
+    margin-bottom: size(100, 60);
   }
 
   &__list {
@@ -26,6 +46,10 @@
     font-weight: 400;
     font-style: normal;
     margin: 0 auto;
+
+    @include r($phone) {
+      margin: 0;
+    }
   }
 
   &__info {
@@ -34,6 +58,10 @@
     span {
       display: block;
       margin-bottom: 15px;
+    }
+
+    @include r($tablet-2) {
+      margin-left: 0;
     }
   }
 

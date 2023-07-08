@@ -60,6 +60,7 @@ body {
 .link {
   text-align: center;
   white-space: nowrap;
+
   &__text {
     display: block;
     transition: transform .3s ease-in-out;
@@ -204,14 +205,23 @@ body {
 .lock {
   overflow: hidden;
   position: relative;
-  filter: blur(20px);
   transition: backdrop-filter .3s ease-in-out;
-  
+
   &::after {
     content: '';
     position: fixed;
     inset: 0;
     z-index: 10;
+    backdrop-filter: blur(20px);
     transition: backdrop-filter .3s ease-in-out;
   }
+
+  .logo {
+    filter: blur(20px);
+    transition: filter .3s ease-in-out;
+  }
+}
+
+.logo {
+  transition: filter .3s ease-in-out;
 }

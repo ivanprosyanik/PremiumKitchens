@@ -28,6 +28,7 @@
       transition: transform .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
 
       &.active {
+        z-index: 999;
         transform: translate(-50%, 100px);
         opacity: 1;
         visibility: visible;

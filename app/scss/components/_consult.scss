@@ -96,7 +96,10 @@
       font-size: 12px;
     }
 
-    @include r(374) {
+    @include r($phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .icon {
         display: none;
       }
