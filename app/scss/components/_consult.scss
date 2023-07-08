@@ -3,20 +3,34 @@
     display: flex;
     justify-content: space-between;
     margin-top: -10px;
+
+    @include r($tablet-2) {
+      flex-direction: column;
+    }
   }
 
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: size(80, 60);
   }
 
   &__text {
-    font-size: 40px;
+    font-size: size(40, 30);
     max-width: 598px;
+
+    @include r($tablet-2) {
+      p {
+        font-size: 30px;
+        font-weight: 300;
+        max-width: 470px;
+      }
+
+      margin-bottom: 70px;
+    }
   }
 
   &__form {
     // padding: 100px 71px 76px;
-    padding: 66px 71px 76px;
+    padding: 66px size(71, 31) 76px;
     border: 1px solid $c-white;
     max-width: 574px;
     width: 100%;
@@ -25,11 +39,19 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+    @include r($tablet-2) {
+      padding: 66px 71px 76px;
+    }
+
+    @include r($tablet) {
+      padding: size(66, 30) size(71, 20) size(76, 40);
+    }
   }
 
   &__form-data {
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: size(90, 60);
   }
 
   &__field {
@@ -58,10 +80,28 @@
 
   &__btn {
     @extend .hero__link;
+    position: static;
     padding: 26px 23px;
     width: 100%;
     display: flex;
     margin-bottom: 20px;
+
+    .icon {
+      display: flex;
+      width: size(62, 49);
+    }
+
+    @include r($tablet) {
+      background-color: #4a4a4a;
+      font-size: 12px;
+    }
+
+    @include r(374) {
+      .icon {
+        display: none;
+      }
+    }
+
   }
 
   &__notice {
