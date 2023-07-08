@@ -2,6 +2,12 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include r($tablet) {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
   }
 
   &__img {
@@ -9,20 +15,49 @@
     border: 1px solid $c-white;
     max-width: 513px;
     width: 100%;
+
+    @include r($tablet-2) {
+      max-width: size(513, 313);
+    }
+
+    @include r($tablet) {
+      height: 519px;
+      max-width: 100%;
+      flex-grow: 1;
+    }
+
+    @include r($phone) {
+      display: none;
+    }
   }
 
   &__img-box {
     position: absolute;
     left: -46px;
     top: -36px;
+    height: 100%;
+    width: 100%;
+
+    @include r($tablet-2) {
+      left: -16px;
+      bottom: 10%;
+
+      img {
+        height: 100%;
+      }
+    }
   }
 
   &__info {
-    max-width: 617px;
+    max-width: size(617, 378);
+
+    @include r($phone) {
+      max-width: 100%;
+    }
   }
 
   &__link {
-    padding: 27px 121px;
+    padding: size(27, 20) size(121, 77);
   }
 
   &__title {
@@ -36,7 +71,7 @@
   }
 
   &__text {
-    margin-bottom: 72px;
+    margin-bottom: size(72, 40);
 
     p {
       max-width: 583px;

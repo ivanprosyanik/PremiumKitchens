@@ -1,7 +1,7 @@
 <section class="materials section-offset section--dark">
   <div class="container">
     <div class="materials__top">
-      <h2 class="title">
+      <h2 class="title materials__title">
         Материалы
       </h2>
       <div class="materials__text">
@@ -15,48 +15,53 @@
         </p>
       </div>
     </div>
-    <ul class="materials__list">
-      <li class="materials__item">
-        <a class="materials__link" href="#">
-          <article class="materials__card card">
-            <div class="card__head" style="background-image: url(images/dist/materials-1.jpg);"></div>
-            <div class="card__bottom">
-              <a class="card__link icon icon--arrow-right-long" href="#">Экзотическая древесина</a>
-            </div>
-          </article>
-        </a>
-      </li>
-      <li class="materials__item">
-        <a class="materials__link" href="#">
-          <article class="materials__card card">
-            <div class="card__head" style="background-image: url(images/dist/materials-2.jpg);"></div>
-            <div class="card__bottom">
-              <a class="card__link icon icon--arrow-right-long" href="#">Натуральный камень</a>
-            </div>
-          </article>
-        </a>
-      </li>
-      <li class="materials__item">
-        <a class="materials__link" href="#">
-          <article class="materials__card card">
-            <div class="card__head" style="background-image: url(images/dist/materials-3.jpg);"></div>
-            <div class="card__bottom">
-              <a class="card__link icon icon--arrow-right-long" href="#">Инженерный кварц</a>
-            </div>
-          </article>
-        </a>
-      </li>
-      <li class="materials__item">
-        <a class="materials__link" href="#">
-          <article class="materials__card card">
-            <div class="card__head" style="background-image: url(images/dist/materials-4.jpg);"></div>
-            <div class="card__bottom">
-              <a class="card__link icon icon--arrow-right-long" href="#">Стекло</a>
-            </div>
-          </article>
-        </a>
-      </li>
-    </ul>
+    <div class="materials__slider swiper">
+      <ul class="materials__list swiper-wrapper">
+        <li class="materials__item swiper-slide">
+          <a class="materials__link" href="#">
+            <article class="materials__card card">
+              <div class="card__head" style="background-image: url(images/dist/materials-1.jpg);"></div>
+              <div class="card__bottom">
+                <a class="card__link icon icon--arrow-right-long" href="#">Экзотическая древесина</a>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="materials__item swiper-slide">
+          <a class="materials__link" href="#">
+            <article class="materials__card card">
+              <div class="card__head" style="background-image: url(images/dist/materials-2.jpg);"></div>
+              <div class="card__bottom">
+                <a class="card__link icon icon--arrow-right-long" href="#">Натуральный камень</a>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="materials__item swiper-slide">
+          <a class="materials__link" href="#">
+            <article class="materials__card card">
+              <div class="card__head" style="background-image: url(images/dist/materials-3.jpg);"></div>
+              <div class="card__bottom">
+                <a class="card__link icon icon--arrow-right-long" href="#">Инженерный кварц</a>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="materials__item swiper-slide">
+          <a class="materials__link" href="#">
+            <article class="materials__card card">
+              <div class="card__head" style="background-image: url(images/dist/materials-4.jpg);"></div>
+              <div class="card__bottom">
+                <a class="card__link icon icon--arrow-right-long" href="#">Стекло</a>
+              </div>
+            </article>
+          </a>
+        </li>
+      </ul>
+      <div class="materials__dots">
+        <div class="materials__dot"></div>
+      </div>
+    </div>
 
   </div>
 </section>

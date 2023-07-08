@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1;
-  
+  z-index: 11;
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -15,11 +15,35 @@
   &__list {
     display: flex;
     align-items: center;
+
+    @include r($tablet-2) {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateY(-150%);
+      opacity: 0;
+      visibility: hidden;
+      text-align: center;
+      transition: transform .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
+
+      &.active {
+        transform: translate(-50%, 100px);
+        opacity: 1;
+        visibility: visible;
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out, visibility .5s ease-in-out;
+      }
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 38px;
+
+      @include r($tablet-2) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 

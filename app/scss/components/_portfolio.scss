@@ -1,20 +1,38 @@
 .portfolio {
-  padding: 105px 0 100px;
+  padding: size(105, 70) 0 size(100, 80);
   background-image: url(../images/sprite.svg#portfolio-bg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+
+  @include r($tablet) {
+    padding-bottom: 160px;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 95px;
-    margin-bottom: 120px;
+    margin-bottom: size(120, 60);
+    flex-wrap: wrap;
+    row-gap: 30px;
   }
 
   &__link {
-    padding: 33px 115px;
+    padding: size(33, 24) size(115, 57);
+
+    @include r($tablet) {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+    }
+
+    @include r($phone) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__content {
@@ -22,11 +40,27 @@
     height: 100%;
     display: flex;
     overflow: hidden;
+    position: relative;
+
+    @include r($tablet) {
+      margin-bottom: 35px;
+    }
+
+    @include r($phone) {
+      margin-bottom: 70px;
+    }
   }
 
   &__list {
     display: flex;
-    position: relative;
+
+    @include r($tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include r($phone) {
+      margin-bottom: 60px;
+    }
   }
 
   &__item {
@@ -34,7 +68,6 @@
     flex-direction: column;
     max-width: 320px;
     width: 100%;
-    // max-height: 330px;
     height: 100%;
     position: relative;
     padding: 97px 57px 79px 60px;
@@ -93,5 +126,34 @@
     display: block;
     font-size: 20px;
     margin-bottom: 50px;
+  }
+
+  &__dots {
+    display: none;
+
+    @include r($tablet) {
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__dot {
+    display: none;
+
+    @include r($tablet) {
+      display: flex;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #737373;
+
+      &--active {
+        background-color: #454545;
+      }
+    }
   }
 }
