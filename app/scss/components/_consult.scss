@@ -80,7 +80,7 @@
 
   &__btn {
     @extend .hero__link;
-    position: static;
+    position: relative;
     padding: 26px 23px;
     width: 100%;
     display: flex;

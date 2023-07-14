@@ -43,7 +43,9 @@
     position: relative;
 
     @include r($tablet) {
+      margin: 0 auto;
       margin-bottom: 35px;
+      width: 90%;
     }
 
     @include r($phone) {
@@ -84,6 +86,18 @@
         visibility: visible;
       }
     }
+
+    // @include r(770) {
+    //   flex-grow: 2;
+    //   flex-shrink: 0;
+    //   max-width: 330px;
+    //   margin-right: 42px;
+    // }
+
+    @include r($phone) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__image {
@@ -94,6 +108,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     transition: filter .3s ease-in-out;
   }
 
@@ -117,7 +132,7 @@
 
   &__name {
     font-weight: 500;
-    font-size: 20px;
+    font-size: size(20, 17);
     margin-bottom: 20px;
     text-transform: uppercase;
   }
