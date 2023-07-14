@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const portfolioSlider = new Swiper('.portfolio__content', {
-    slidesPerView: 'auto',
-    spaceBetween: 42,
     pagination: {
       el: ".portfolio__dots",
       bulletClass: "portfolio__dot",
@@ -17,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
       },
 
-      768: {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
+      576: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 32,
       },
 
       992: {
@@ -57,7 +56,66 @@ document.addEventListener("DOMContentLoaded", () => {
         bulletClass: "materials__dot",
         bulletActiveClass: "materials__dot--active",
         clickable: true,
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 20,
+        },
+
+        576: {
+          spaceBetween: 25,
+        }
       }
     });
   };
+
+  // // Получаем ссылки на элементы меню
+  // const menuLinks = document.querySelectorAll('.header__link');
+
+  // // Добавляем обработчик события "click" для каждой ссылки
+  // menuLinks.forEach(link => {
+  //   link.addEventListener('click', scrollToSection);
+  // });
+
+  // // Функция для плавного перехода к секции
+  // function scrollToSection(event) {
+  //   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+  //   // Получаем ID секции, на которую нужно перейти (из атрибута href ссылки)
+  //   const targetId = this.getAttribute('href');
+
+  //   // Получаем элемент целевой секции
+  //   const targetSection = document.querySelector(targetId);
+
+  //   // Проверяем, что секция существует
+  //   if (targetSection) {
+  //     // Вычисляем позицию секции относительно верхней части страницы
+  //     const targetPosition = targetSection.offsetTop;
+
+  //     // Осуществляем плавный скроллинг до позиции секции
+  //     window.scrollTo({
+  //       top: targetPosition,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // }
+
+  const menuLinks = document.querySelectorAll(".header__link");
+
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const id = this.getAttribute("href");
+      const targetSection = document.querySelector(id);
+
+      if (targetSection) {
+        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
 });

@@ -15,11 +15,11 @@
     border: 1px solid $c-white;
     max-width: 513px;
     width: 100%;
-
+    
     @include r($tablet-2) {
       max-width: size(513, 313);
     }
-
+    
     @include r($tablet) {
       height: 519px;
       max-width: 100%;
@@ -44,6 +44,13 @@
 
       img {
         height: 100%;
+      }
+    }
+
+    @include r($tablet) {
+      img {
+        max-width: 100%;
+        width: 100%;
       }
     }
   }
