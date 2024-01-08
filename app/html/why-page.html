@@ -1,0 +1,87 @@
+@include('global/_head.html', {
+pageName: 'Premium Kitchens - Почему мы?'
+})
+
+@include('global/_header.html')
+
+<main class="main why-main">
+  <section class="hang section-offset">
+    <div class="container">
+      <h2 class="title hang__title">Особенности кухонь <span>«Premuim kitchens»</span></h2>
+      <ul class="hang__list">
+        <li class="hang__item hang__item--design">
+          <h3 class="hang__item-title">Стильный дизайн</h3>
+          <p class="hang__item-text">Материалы и цвета коллекций подобраны так, что ваша кухня получится красивой и
+            современной.</p>
+        </li>
+        <li class="hang__item hang__item--complect">
+          <h3 class="hang__item-title">Полная комплектация</h3>
+          <p class="hang__item-text">Кухня комплектуется всем необходимым, включая столешницу, бытовую технику и
+            сантехнику.</p>
+        </li>
+        <li class="hang__item hang__item--ready">
+          <h3 class="hang__item-title">Готовность от 30 дней</h3>
+          <p class="hang__item-text">Срок изготовления вашей кухни,от составления дизайн-проекта
+            до установки - от 30 дней рабочих дней.</p>
+        </li>
+        <li class="hang__item hang__item--material">
+          <h3 class="hang__item-title">Качественные материалы</h3>
+          <p class="hang__item-text">
+            Только фабричное производство и надежные европейские материалы и фурнитура брендов Blum, Hettich, и д.р.
+          </p>
+        </li>
+        <li class="hang__item hang__item--price">
+          <h3 class="hang__item-title">Приятная цена</h3>
+          <p class="hang__item-text">
+            Благодаря типовым размерам и оптимизации производства кухня получается дешевле, чем на заказ.
+          </p>
+        </li>
+        </li>
+        <li class="hang__item hang__item--3d">
+          <h3 class="hang__item-title">Бесплатный 3D-проект</h3>
+          <p class="hang__item-text">
+            Дизайнер поможет определитьсяс выбором материала и цвета,рассчитает стоимость.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="meet section-offset" style="background-image: url(images/dist/why-meet.jpg);">
+    <div class="container">
+      <h2 class="title meet__title">Запишитесь на встречу к дизайнеру</h2>
+      <div class="meet__text">
+        <p>
+          Дизайнер поможет определиться с материалами, бесплатно разработает 3D проект кухни и рассчитает её стоимость. 
+        </p>
+      </div>
+      <button class="meet__btn link link--border" type="button">
+        <span class="link__text">Записаться к дизайнеру</span>
+      </button>
+    </div>
+  </section>
+  <section class="projects section-offset">
+    <div class="container">
+      <div class="projects__offer">
+        <h2 class="title projects__title">Наши реализованные проекты</h2>
+        <p class="projects__text">Мы установили более 20 тыс. кухонь в Казахстане, Беларуси, России и не только.</p>
+      </div>
+      <div class="projects__slider swiper">
+        <ul class="projects__list swiper-wrapper">
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects1.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects2.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects3.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects4.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects5.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects6.jpg);"></li>
+          <li class="projects__item swiper-slide" style="background-image: url(images/dist/projects7.jpg);"></li>
+        </ul>
+        <button class="projects__btn projects__btn--prev" type="button"></button>
+        <button class="projects__btn projects__btn--next" type="button"></button>
+      </div>
+    </div>
+  </section>
+</main>
+<button class="scroll-to-top icon icon--arrow-up" id="scroll-to-top" type="button"></button>
+
+@include('global/_footer.html')
+@include('global/_scripts.html')

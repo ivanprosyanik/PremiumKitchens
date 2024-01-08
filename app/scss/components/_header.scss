@@ -51,5 +51,11 @@
   &__link {
     text-decoration: none;
     color: inherit;
+    transition: transform .2s ease-in;
+    will-change: transform;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

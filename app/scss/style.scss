@@ -5,7 +5,15 @@
 @import 'global/settings';
 
 
+// Components
+
 @import 'components/header';
+@import 'components/footer';
+
+// Pages:
+
+// Main page:
+
 @import 'components/hero';
 @import 'components/about';
 @import 'components/why';
@@ -13,4 +21,7 @@
 @import 'components/steps';
 @import 'components/portfolio';
 @import 'components/consult';
-@import 'components/footer';
+
+// Why-page: 
+
+@import 'pages/why-page/why-page';
