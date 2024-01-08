@@ -99,15 +99,15 @@ function libsCSS() {
 // }
 
 function images() {
-  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
+  return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
     .pipe(newer('app/images/dist'))
     .pipe(avif({ quality: 50 }))
 
-    .pipe(src('app/images/src/*.*'))
+    .pipe(src('app/images/src/**/*.*'))
     .pipe(newer('app/images/dist'))
     .pipe(webp())
 
-    .pipe(src('app/images/src/*.*'))
+    .pipe(src('app/images/src/**/*.*'))
     .pipe(newer('app/images/dist'))
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 75, progressive: true })

@@ -118,4 +118,44 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+  const scrollToTop = document.getElementById('scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    scrollToTop.classList.remove('active');
+    if (window.scrollY > 100) {
+      scrollToTop.classList.add('active');
+    }
+  });
+
+  scrollToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  });
+
+  const whyProjectsSlider = new Swiper('.projects__slider', {
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+    spaceBetween: 25,
+    navigation: {
+      nextEl: '.projects__btn--next',
+      prevEl: '.projects__btn--prev',
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 5,
+      },
+
+      576: {
+        spaceBetween: 5,
+      },
+
+      768: {
+        spaceBetween: 10,
+      },
+    }
+  });
 });

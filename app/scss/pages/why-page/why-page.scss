@@ -1,0 +1,224 @@
+.hang {
+  &__title {
+    font-size: size(50, 40);
+    text-align: center;
+    margin-bottom: size(120, 30);
+    width: 100%;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: size(66, 50) size(72, 40);
+
+    @include r($tablet-2) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    padding-top: 90px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-position: top;
+    max-width: 414px;
+    text-align: center;
+
+    @include r($phone) {
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &--design {
+      background-image: url(../images/sprite.svg#smile);
+    }
+
+    &--complect {
+      background-image: url(../images/sprite.svg#complect);
+    }
+
+    &--ready {
+      background-image: url(../images/sprite.svg#icon-clock);
+    }
+
+    &--material {
+      background-image: url(../images/sprite.svg#icon-diamant);
+    }
+
+    &--price {
+      background-image: url(../images/sprite.svg#icon-wallet);
+    }
+
+    &--3d {
+      background-image: url(../images/sprite.svg#icon-sixangle);
+    }
+  }
+
+  &__item {
+    &-title {
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      max-width: 302px;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.meet {
+  padding: 110px 0 70px;
+  text-align: center;
+  margin: 0 auto 120px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  @include r($phone) {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(57, 57, 57, 0.71) 0.07%, rgba(57, 57, 57, 0.00) 99.93%);
+    z-index: 0;
+  }
+
+  &__title,
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: size(50, 40);
+    font-weight: 700;
+  }
+
+  &__text {
+    max-width: 781px;
+    margin: 0 auto;
+    margin: 30px auto;
+  }
+
+  &__btn {
+    font-size: 30px;
+    padding: 32px size(68, 50);
+  }
+}
+
+.projects {
+
+  &__offer {
+    margin: 0 auto 100px;
+    text-align: center;
+
+    @include r($tablet-2) {
+      text-align: left;
+    }
+
+    @include r($tablet) {
+      margin-bottom: size(100, 50);
+    }
+  }
+
+  &__title {
+    font-size: size(50, 40);
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: size(596, 293);
+    height: size(596, 293);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    width: size(132, 76);
+    height: size(132, 76);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(27px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+      opacity: .9;
+
+      &::before {
+        scale: 1.5;
+      }
+    }
+
+    &[disabled] {
+      opacity: .5;
+      background-color: #fff;
+    }
+
+    &::before {
+      content: '';
+      width: 28px;
+      height: 28px;
+      mask-image: url(../images/sprite.svg#arrow-left);
+      background-color: #000;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      transition: background-color .3s ease-in-out, scale .3s ease-in-out;
+    }
+
+    &--next {
+      right: 0;
+
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
