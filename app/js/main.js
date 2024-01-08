@@ -137,24 +137,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const whyProjectsSlider = new Swiper('.projects__slider', {
-    slidesPerView: 2,
-    slidesPerGroup: 1,
-    spaceBetween: 25,
     navigation: {
       nextEl: '.projects__btn--next',
       prevEl: '.projects__btn--prev',
     },
     breakpoints: {
       320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        centeredSlides: true,
         spaceBetween: 5,
       },
 
       576: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
         spaceBetween: 5,
       },
 
       768: {
         spaceBetween: 10,
+      },
+
+      992: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 25,
       },
     }
   });
