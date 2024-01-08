@@ -129,6 +129,13 @@
 }
 
 .projects {
+  .container {
+    @include r($phone) {
+      max-width: 100vw;
+      width: 100%;
+      padding: 0;
+    }
+  }
 
   &__offer {
     margin: 0 auto 100px;
@@ -165,13 +172,27 @@
   }
 
   &__item {
-    max-width: size(596, 293);
-    height: size(596, 293);
+    max-width: 596px;
+    height: 596px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
     flex-grow: 1;
     flex-shrink: 0;
+
+    @include r($tablet) {
+      max-width: size(596, 293);
+      width: 100%;
+      margin: 0 auto;
+      height: size(596, 293);
+    }
+
+    @include r($phone) {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &__btn {
